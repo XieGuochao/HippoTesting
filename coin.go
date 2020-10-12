@@ -1,4 +1,4 @@
-package main
+package hippotesting
 
 // HashFunction ...
 type HashFunction func(string) string
