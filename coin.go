@@ -3,6 +3,12 @@ package main
 // HashFunction ...
 type HashFunction func(string) string
 
+// KeyPair ...
+type KeyPair struct {
+	PublicKey  []byte
+	PrivateKey []byte
+}
+
 // ClientBase ...
 // The Interface for a coin using HippoTesting Platform.
 type ClientBase interface {
@@ -11,8 +17,11 @@ type ClientBase interface {
 	SetGood() error
 	SetEvil() error
 	SetHashFunction(HashFunction) error
+	GetHashFunction() HashFunction
 	Pause() error
 	Stop() error
+
+	GetKeyPair() (KeyPair, error)
 }
 
 // BlockBase ...
