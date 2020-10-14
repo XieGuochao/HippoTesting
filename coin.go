@@ -21,7 +21,11 @@ type ClientBase interface {
 	Pause() error
 	Stop() error
 
-	GetKeyPair() (KeyPair, error)
+	GetGenisis() *BlockBase
+
+	GetKeyPair() *KeyPair
+
+	Sync() error
 }
 
 // BlockBase ...
