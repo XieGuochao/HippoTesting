@@ -9,6 +9,14 @@ type KeyPair struct {
 	PrivateKey []byte
 }
 
+// NewKeyPair ...
+func NewKeyPair(publicKey, privateKey []byte) *KeyPair {
+	kp := new(KeyPair)
+	kp.PrivateKey = privateKey
+	kp.PublicKey = publicKey
+	return kp
+}
+
 // ClientBase ...
 // The Interface for a coin using HippoTesting Platform.
 type ClientBase interface {
