@@ -1,12 +1,14 @@
 package hippotesting
 
+import "crypto"
+
 // HashFunction ...
 type HashFunction func(string) string
 
 // KeyPair ...
 type KeyPair struct {
-	PublicKey  []byte
-	PrivateKey []byte
+	PublicKey  crypto.PublicKey
+	PrivateKey crypto.PrivateKey
 }
 
 // NewKeyPair ...
