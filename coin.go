@@ -12,7 +12,7 @@ type KeyPair struct {
 }
 
 // NewKeyPair ...
-func NewKeyPair(publicKey, privateKey []byte) *KeyPair {
+func NewKeyPair(publicKey crypto.PublicKey, privateKey crypto.PrivateKey) *KeyPair {
 	kp := new(KeyPair)
 	kp.PrivateKey = privateKey
 	kp.PublicKey = publicKey
