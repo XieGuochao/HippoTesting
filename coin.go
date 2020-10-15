@@ -3,7 +3,7 @@ package hippotesting
 import "crypto"
 
 // HashFunction ...
-type HashFunction func(string) string
+type HashFunction func(string) []byte
 
 // KeyPair ...
 type KeyPair struct {
